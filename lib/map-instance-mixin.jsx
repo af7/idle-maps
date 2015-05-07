@@ -10,7 +10,7 @@ var MapLoader = require('async-google-maps').MapLoader,
 
 module.exports = {
     componentDidMount: function () {
-        MapLoader.create(this.getDOMNode(), this.props.mapOptions).then(function (map) {
+        MapLoader.create(this.findDOMNode(), this.props.mapOptions).then(function (map) {
             this.idle(map);
         }.bind(this));
     },
